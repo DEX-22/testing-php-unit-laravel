@@ -6,6 +6,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
+use function PHPUnit\Framework\assertSame;
+
 class ClientUnoTest extends TestCase
 {
     /**
@@ -18,5 +20,30 @@ class ClientUnoTest extends TestCase
         $response = $this->post('/api/clients/get');
 
         $response->assertStatus(200);
+    }
+
+    /**
+     * 
+     *
+     * @test
+     */
+    public function exam(){
+
+        $exam = "hola";
+
+        assertSame('hola',$exam);
+
+    }
+    /**
+     * 
+     *
+     * @test
+     */
+    public function otro(){
+
+        $exam = "hola";
+
+        assertSame('hola',$exam);
+
     }
 }
